@@ -2,7 +2,7 @@ from maze import path_from
 from functions import lenghtM, returnP, returnKey
 
 
-def a(maze):
+def a(maze):      #Algorithm A*
     start_node = maze.find_node('S')
     start_node.cost = 0
     q = [start_node]
@@ -29,7 +29,7 @@ def a(maze):
     return None
 
 
-def gbfs(maze):
+def gbfs(maze):   #Algorithm Greedy Best-first search
     start_node = maze.find_node('S')
     q = [start_node]
     while len(q) > 0:
@@ -47,7 +47,7 @@ def gbfs(maze):
     return None
     
 
-def dijkstra(maze):
+def dijkstra(maze):     #Dijkstra's algorithm
     start_node = maze.find_node('S')
     start_node.cost = 0
     q = [start_node]
